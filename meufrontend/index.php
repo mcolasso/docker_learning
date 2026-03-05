@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,12 @@
 
 <body>
 
-    <h1>Meu HTML! </h1>
+    <h1>Meu HTML </h1>
+    <?php
+
+    $nome = "Matheus";
+    echo "Olá $nome";
+    ?>
 
 
 </body>
