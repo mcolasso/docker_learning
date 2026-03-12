@@ -9,17 +9,22 @@ services:
     image: phpmyadmin
     restart: always
     ports:
-      - 8080:80
+      - "8080:80"
     environment:
       - PMA_ARBITRARY=1
+
   web:
-    image: nginx
+    build:
+      context: ./
+      dockerfile: Dockerfile-nginx
     ports:
       - "80:80"
     volumes:
       - ./meufrontend:/usr/share/nginx/html
+      - .:/var/www/html
+
   php-fpm:
     image: php:8.3-fpm
-    container_name: php:8.3-fpm
+    container_name: fzl-php8.3-fpm
     volumes:
       - .:/var/www/html
