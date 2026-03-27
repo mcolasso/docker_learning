@@ -1,9 +1,10 @@
 services:
-  db:
+  db: 
     image: mariadb:10.11
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: aluno123
+      MYSQL_DATABASE: meubanco
 
   phpmyadmin:
     image: phpmyadmin
@@ -27,3 +28,12 @@ services:
     container_name: fzl-php8.3-fpm
     volumes:
       - ./meufrontend:/var/www/html
+
+
+
+
+
+
+
+
+:wq
